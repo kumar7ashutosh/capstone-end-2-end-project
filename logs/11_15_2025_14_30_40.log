@@ -1,0 +1,2 @@
+[ 2025-11-15 14:30:42,168 ] root - DEBUG - dataset loaded from https://raw.githubusercontent.com/kumar7ashutosh/credit_card/refs/heads/main/data.csv
+[ 2025-11-15 14:30:42,240 ] root - DEBUG - dataset uploaded at capstone_project/data\raw
