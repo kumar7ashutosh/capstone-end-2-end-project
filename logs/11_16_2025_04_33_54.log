@@ -1,0 +1,5 @@
+[ 2025-11-16 04:33:54,794 ] root - DEBUG - dataset loaded from capstone_project/data/interim/train_df.csv
+[ 2025-11-16 04:33:54,805 ] root - DEBUG - dataset loaded from capstone_project/data/interim/test_df.csv
+[ 2025-11-16 04:33:55,037 ] root - INFO - train and test data reconstructed using powertransformer
+[ 2025-11-16 04:33:55,123 ] root - INFO - transformed training data is saved at capstone_project/data\processed
+[ 2025-11-16 04:33:55,123 ] root - INFO - transformed testing data is saved at capstone_project/data\processed

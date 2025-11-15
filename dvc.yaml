@@ -1,0 +1,47 @@
+stages:
+  data_ingestion:
+    cmd: python -m capstone_project.src.data.data_ingestion
+    deps:
+      - capstone_project/src/data/data_ingestion.py
+    outs:
+      - capstone_project/data/raw
+
+  data_preprocessing:
+    cmd: python -m capstone_project.src.data.data_preprocess
+    deps:
+      - capstone_project/data/raw
+      - capstone_project/src/data/data_preprocess.py
+    params:
+      - data_preprocessing.test_size
+    outs:
+      - capstone_project/data/interim
+
+  feature_engineering:
+    cmd: python -m capstone_project.src.features.feature_engineering
+    deps:
+      - capstone_project/data/interim
+      - capstone_project/src/features/feature_engineering.py
+    outs:
+      - capstone_project/data/processed
+
+  model_training:
+    cmd: python -m capstone_project.src.model.model_training
+    deps:
+      - capstone_project/data/processed
+      - capstone_project/src/model/model_training.py
+    params:
+      - model.C
+      - model.solver
+      - model.penalty
+    outs:
+      - capstone_project/models/model.pkl
+
+  model_evaluation:
+    cmd: python -m capstone_project.src.model.model_evaluation
+    deps:
+      - capstone_project/models/model.pkl
+      - capstone_project/src/model/model_evaluation.py
+    metrics:
+      - capstone_project/reports/metrics.json
+    outs:
+      - capstone_project/reports/experiment_info.json
