@@ -1,0 +1,5 @@
+[ 2025-11-15 16:42:53,894 ] root - INFO - params loaded from params.yaml
+[ 2025-11-15 16:42:53,983 ] root - INFO - normal shape (492, 31), fraud shape (492, 31)
+[ 2025-11-15 16:42:53,989 ] root - INFO - normal shape (492, 31), fraud shape (492, 31) after sampling
+[ 2025-11-15 16:42:53,990 ] root - INFO - resampled dataset (984, 31)
+[ 2025-11-15 16:42:54,097 ] root - INFO - train and test data saved at capstone_project/data\interim
