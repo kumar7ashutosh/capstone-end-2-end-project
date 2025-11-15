@@ -26,7 +26,7 @@ def train_model(x_train:np.ndarray,y_train:np.ndarray)->LogisticRegression:
     clf=LogisticRegression(C=C,solver=solver,penalty=penalty)
     clf.fit(x_train,y_train)
     logging.info('model trained')
-
+    return clf
 def save_transformer(transformer,file_path:str)->None:
     with open(file_path,'wb') as file:
         pickle.dump(transformer,file)

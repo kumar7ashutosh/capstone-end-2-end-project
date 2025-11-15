@@ -1,0 +1,96 @@
+[ 2025-11-16 03:16:21,906 ] dagshub.auth.tokens - DEBUG - Loading token cache from C:\Users\kumar\AppData\Local\dagshub\dagshub\Cache\tokens
+[ 2025-11-16 03:16:21,937 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2025-11-16 03:16:22,339 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CBFA120>
+[ 2025-11-16 03:16:22,339 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002093CBE97F0> server_hostname='dagshub.com' timeout=30
+[ 2025-11-16 03:16:22,650 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CC40550>
+[ 2025-11-16 03:16:22,650 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:22,652 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2025-11-16 03:16:22,652 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:22,653 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2025-11-16 03:16:22,653 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:23,465 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 15 Nov 2025 21:46:23 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=1546b537fbbfe665; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=Tf5KKdq1Jt2mVDaGlwheMs1fm2k6MTc2MzI0MzE4Mzc0OTIyODcwMA; Path=/; Expires=Sun, 16 Nov 2025 21:46:23 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'28b3633c-230f-4ce4-b298-34d66d0cfcfe'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20251115T214623Z-167f677f58cwskcthC1MAA5qzn000000064g0000000000pk'), (b'x-fd-int-roxy-purgeid', b'3'), (b'X-Cache', b'PRIVATE_NOSTORE')])
+[ 2025-11-16 03:16:23,466 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-11-16 03:16:23,467 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:23,467 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2025-11-16 03:16:23,467 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2025-11-16 03:16:23,467 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2025-11-16 03:16:23,468 ] httpcore.connection - DEBUG - close.started
+[ 2025-11-16 03:16:23,468 ] httpcore.connection - DEBUG - close.complete
+[ 2025-11-16 03:16:23,478 ] dagshub - INFO - Accessing as kumarashutoshbtech2023
+[ 2025-11-16 03:16:23,505 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2025-11-16 03:16:23,671 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CC40CD0>
+[ 2025-11-16 03:16:23,672 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002093CBE9880> server_hostname='dagshub.com' timeout=30
+[ 2025-11-16 03:16:24,085 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CC11350>
+[ 2025-11-16 03:16:24,085 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:24,086 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2025-11-16 03:16:24,086 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:24,086 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2025-11-16 03:16:24,086 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:25,000 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 15 Nov 2025 21:46:25 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=5cab64dc0d30e465; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=rQ8ZHBIznd3LIuHu6LUg9eydtSc6MTc2MzI0MzE4NTE5MTc5NjcxNg; Path=/; Expires=Sun, 16 Nov 2025 21:46:25 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'83c7fdb5-0f8f-411e-9ee4-7b779fc6e83e'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20251115T214624Z-167f677f58c6zhqphC1MAAzn1800000005s0000000000487'), (b'x-fd-int-roxy-purgeid', b'3'), (b'X-Cache', b'PRIVATE_NOSTORE')])
+[ 2025-11-16 03:16:25,001 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/kumarashutoshbtech2023/capstone-end-2-end-project "HTTP/1.1 200 OK"
+[ 2025-11-16 03:16:25,001 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:25,002 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2025-11-16 03:16:25,003 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2025-11-16 03:16:25,003 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2025-11-16 03:16:25,004 ] httpcore.connection - DEBUG - close.started
+[ 2025-11-16 03:16:25,005 ] httpcore.connection - DEBUG - close.complete
+[ 2025-11-16 03:16:25,035 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2025-11-16 03:16:25,168 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CC122C0>
+[ 2025-11-16 03:16:25,168 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002093CBE99A0> server_hostname='dagshub.com' timeout=30
+[ 2025-11-16 03:16:25,516 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002093CC0CDD0>
+[ 2025-11-16 03:16:25,516 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:25,517 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2025-11-16 03:16:25,517 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:25,517 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2025-11-16 03:16:25,517 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:26,332 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 15 Nov 2025 21:46:26 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=aae0742bbc9d7448; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=m74f_DP50MzCMzSyCPwLDXRgBF46MTc2MzI0MzE4NjYxNTUxNjcwMQ; Path=/; Expires=Sun, 16 Nov 2025 21:46:26 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'be058fba-89f0-41a8-b841-27408ef0fdc2'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20251115T214626Z-164d9d6c96d9bnmvhC1MAAq1s80000000dbg0000000001hq'), (b'x-fd-int-roxy-purgeid', b'3'), (b'X-Cache', b'PRIVATE_NOSTORE')])
+[ 2025-11-16 03:16:26,333 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-11-16 03:16:26,333 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2025-11-16 03:16:26,333 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2025-11-16 03:16:26,333 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2025-11-16 03:16:26,334 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2025-11-16 03:16:26,334 ] httpcore.connection - DEBUG - close.started
+[ 2025-11-16 03:16:26,334 ] httpcore.connection - DEBUG - close.complete
+[ 2025-11-16 03:16:26,337 ] dagshub - INFO - Initialized MLflow to track repo "kumarashutoshbtech2023/capstone-end-2-end-project"
+[ 2025-11-16 03:16:26,339 ] dagshub - INFO - Repository kumarashutoshbtech2023/capstone-end-2-end-project initialized!
+[ 2025-11-16 03:16:26,437 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dagshub.com:443
+[ 2025-11-16 03:16:27,869 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/experiments/get-by-name?experiment_name=dvc-capstone-pipeline HTTP/1.1" 200 None
+[ 2025-11-16 03:16:28,025 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=C:\Users\kumar\OneDrive\Desktop\mlops_engg\capstone\capstone-end-2-end-project, stdin=None, shell=False, universal_newlines=False)
+[ 2025-11-16 03:16:28,100 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=C:\Users\kumar\OneDrive\Desktop\mlops_engg\capstone\capstone-end-2-end-project, stdin=None, shell=False, universal_newlines=False)
+[ 2025-11-16 03:16:28,172 ] git.util - DEBUG - sys.platform='win32', git_executable='git'
+[ 2025-11-16 03:16:28,176 ] git.cmd - DEBUG - Popen(['git', 'check-ignore', 'C:\\Users\\kumar\\OneDrive\\Desktop\\mlops_engg\\capstone\\capstone-end-2-end-project\\capstone_project\\src\\model'], cwd=C:\Users\kumar\OneDrive\Desktop\mlops_engg\capstone\capstone-end-2-end-project, stdin=None, shell=False, universal_newlines=False)
+[ 2025-11-16 03:16:28,285 ] git.cmd - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\kumar\OneDrive\Desktop\mlops_engg\capstone\capstone-end-2-end-project, stdin=<valid stream>, shell=False, universal_newlines=False)
+[ 2025-11-16 03:16:29,405 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/create HTTP/1.1" 200 None
+[ 2025-11-16 03:16:29,414 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): config.mlflow-telemetry.io:443
+[ 2025-11-16 03:16:29,552 ] root - INFO - model loaded from capstone_project/models/model.pkl
+[ 2025-11-16 03:16:29,564 ] root - DEBUG - data retrieved from capstone_project/data/processed/transformed_test.csv
+[ 2025-11-16 03:16:29,591 ] root - INFO - model evaluation metrics calculated
+[ 2025-11-16 03:16:29,594 ] root - INFO - Metrics saved to capstone_project/reports/metrics.json
+[ 2025-11-16 03:16:29,920 ] urllib3.connectionpool - DEBUG - https://config.mlflow-telemetry.io:443 "GET /3.5.0.json HTTP/1.1" 200 215
+[ 2025-11-16 03:16:30,121 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2025-11-16 03:16:30,632 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2025-11-16 03:16:31,029 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mlflow-telemetry.io:443
+[ 2025-11-16 03:16:31,051 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2025-11-16 03:16:31,554 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2025-11-16 03:16:32,066 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:32,275 ] urllib3.connectionpool - DEBUG - https://api.mlflow-telemetry.io:443 "POST /log HTTP/1.1" 200 30
+[ 2025-11-16 03:16:32,476 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:32,988 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:33,398 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:33,912 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:34,422 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:34,831 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:35,343 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:35,856 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:36,264 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:36,675 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:37,187 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:37,608 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:38,110 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:38,722 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2025-11-16 03:16:38,731 ] root - DEBUG - Model info saved to capstone_project/reports/experiment_info.json
+[ 2025-11-16 03:16:39,644 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/get?run_uuid=90b7c561eced4c82a177844e9bf35c38&run_id=90b7c561eced4c82a177844e9bf35c38 HTTP/1.1" 200 None
+[ 2025-11-16 03:16:40,565 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow-artifacts/artifacts/447dd5164a944186b036106e6cff35e4/90b7c561eced4c82a177844e9bf35c38/artifacts/metrics.json HTTP/1.1" 200 2
+[ 2025-11-16 03:16:41,376 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mlflow-telemetry.io:443
+[ 2025-11-16 03:16:41,412 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/get?run_uuid=90b7c561eced4c82a177844e9bf35c38&run_id=90b7c561eced4c82a177844e9bf35c38 HTTP/1.1" 200 None
+[ 2025-11-16 03:16:42,409 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /kumarashutoshbtech2023/capstone-end-2-end-project.mlflow/api/2.0/mlflow/runs/update HTTP/1.1" 200 None
