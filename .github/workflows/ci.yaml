@@ -25,7 +25,7 @@ jobs:
 
       - name: install dependencies
         run: |
-          pip install -r capstone_project/flask_app/requirements.txt
+          pip install -r capstone_project/flask_app/requirements.txt 
 
       - name: run pipeline
         env:
