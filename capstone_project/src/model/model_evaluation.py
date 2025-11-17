@@ -6,34 +6,18 @@ import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 import logging
 import mlflow
-import dagshub
-from dotenv import load_dotenv  # new
 
-# Load environment variables from .env file if present
-load_dotenv()
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
-# Set DagsHub token from environment
-DAGSHUB_TOKEN = os.environ.get("DAGSHUB_TOKEN")
-
-# Initialize MLflow/DagsHub only if token exists
-if DAGSHUB_TOKEN:
-    os.environ["DAGSHUB_TOKEN"] = DAGSHUB_TOKEN
-    mlflow.set_tracking_uri('https://dagshub.com/kumarashutoshbtech2023/capstone-end-2-end-project.mlflow')
-    dagshub.init(
-        repo_owner='kumarashutoshbtech2023',
-        repo_name='capstone-end-2-end-project',
-        mlflow=True
-    )
-    logging.info("MLflow/DagsHub initialized")
-else:
-    logging.warning("DAGSHUB_TOKEN not found. MLflow logging will use local SQLite.")
-    mlflow.set_tracking_uri('sqlite:///mlflow.db')
-
-# Paths (can be made configurable)
+# Paths
 MODEL_PATH = 'capstone_project/models/model.pkl'
 TEST_DATA_PATH = 'capstone_project/data/processed/transformed_test.csv'
 METRICS_PATH = 'capstone_project/reports/metrics.json'
 EXPERIMENT_INFO_PATH = 'capstone_project/reports/experiment_info.json'
+
+# Use local MLflow tracking (SQLite) only
+mlflow.set_tracking_uri('sqlite:///mlflow.db')  # no remote connection
 
 # Load data
 def load_data(data_path: str) -> pd.DataFrame:
@@ -76,7 +60,8 @@ def save_model_info(run_id: str, model_path: str, file_path: str):
 
 # Main function
 def main():
-    mlflow.set_experiment('dvc-capstone-pipeline')
+    mlflow.set_experiment('dvc-capstone-pipeline')  # local SQLite experiment
+
     with mlflow.start_run() as run:
         clf = load_model(MODEL_PATH)
         test_df = load_data(TEST_DATA_PATH)
@@ -85,14 +70,14 @@ def main():
 
         metrics = evaluate_model(clf, x_test, y_test)
         save_metrics(metrics, METRICS_PATH)
-        mlflow.log_metrics(metrics)  # log all metrics at once
+        mlflow.log_metrics(metrics)  # log metrics locally
 
-        # Log model parameters
+        # Log model parameters if available
         if hasattr(clf, 'get_params'):
             mlflow.log_params(clf.get_params())
 
         save_model_info(run.info.run_id, MODEL_PATH, EXPERIMENT_INFO_PATH)
-        mlflow.log_artifact(METRICS_PATH)
+        mlflow.log_artifact(METRICS_PATH)  # local artifact logging
 
 if __name__ == "__main__":
     main()
