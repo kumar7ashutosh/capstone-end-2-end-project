@@ -13,7 +13,11 @@ import os
 import mlflow
 
 os.environ["MLFLOW_TRACKING_USERNAME"] = "kumarashutoshbtech2023"
-os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("DAGSHUB_TOKEN")
+token = os.getenv("DAGSHUB_TOKEN")
+if token:
+    os.environ["MLFLOW_TRACKING_PASSWORD"] = token
+else:
+    print("⚠ DAGSHUB_TOKEN not found — skipping MLflow logging.")
 os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/kumarashutoshbtech2023/capstone-end-2-end-project.mlflow"
 
 mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
