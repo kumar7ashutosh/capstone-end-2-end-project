@@ -29,9 +29,11 @@ if token:
 
 else:
     print("⚠ DAGSHUB_TOKEN not found — using LOCAL Mlflow instead")
-    
-    # local mlruns/ folder will be used
+    mlflow.set_tracking_uri(None)
+
+    # Now force local MLflow store
     mlflow.set_tracking_uri("file:./mlruns")
+    # local mlruns/ folder will be used
 
 
 # ======================================
