@@ -38,7 +38,7 @@ jobs:
       - name: Run Flask app tests
         if: success()
 
-        run: python -m unittest capstone_project.tests.test_flask_app
+        run: python capstone_project/tests/test_flask_app.py
 
       - name: Login to AWS ECR
         if: success()
