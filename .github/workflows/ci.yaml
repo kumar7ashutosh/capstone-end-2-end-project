@@ -35,12 +35,6 @@ jobs:
           dvc repro
 
 
-      - name: Promote model to production
-        if: success()
-        env:
-          CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
-        run: python scripts/promote_model.py
-
       - name: Run Flask app tests
         if: success()
 
@@ -72,7 +66,7 @@ jobs:
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest
 
       - name: Set Up kubectl
-        uses: azure/setup-kubectl@v3
+        uses: azure/setup-kubectl@v3 
         with:
           version: 'latest'
       
