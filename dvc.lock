@@ -23,8 +23,8 @@ stages:
       nfiles: 1
     - path: capstone_project/src/data/data_preprocess.py
       hash: md5
-      md5: eea07f23494902ee29acbcb9fd61c392
-      size: 1763
+      md5: 5eb9abd125f647006fb12aaa5ddc6283
+      size: 1762
     params:
       params.yaml:
         data_preprocessing.test_size: 0.22
@@ -62,8 +62,8 @@ stages:
       nfiles: 2
     - path: capstone_project/src/model/model_training.py
       hash: md5
-      md5: 1c839fc792e8a649e778b21474c8a85f
-      size: 1909
+      md5: 583d5edf345958e79b69c6ec610df5fb
+      size: 1907
     params:
       params.yaml:
         model.C: 0.1

@@ -1,0 +1,5 @@
+[ 2025-11-17 22:55:29,661 ] root - DEBUG - data retrieved from capstone_project/data/processed/transformed_train.csv
+[ 2025-11-17 22:55:29,863 ] root - DEBUG - Parameters retrieved from params.yaml
+[ 2025-11-17 22:55:29,878 ] root - INFO - model trained
+[ 2025-11-17 22:55:29,882 ] root - INFO - PowerTransformer saved to capstone_project/models/power_transformer.pkl
+[ 2025-11-17 22:55:29,885 ] root - INFO - PowerTransformer saved to capstone_project/models/model.pkl
