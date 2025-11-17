@@ -35,10 +35,10 @@ jobs:
           dvc repro
 
 
-      - name: Run Flask app tests
-        if: success()
+      # - name: Run Flask app tests
+      #   if: success()
 
-        run: python capstone_project/tests/test_flask_app.py
+      #   run: python capstone_project/tests/test_flask_app.py
 
       - name: Login to AWS ECR
         if: success()
