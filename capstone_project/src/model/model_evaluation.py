@@ -5,13 +5,18 @@ import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 import logging
 import mlflow
-import dagshub
 import os
 import sys
 from capstone_project.src.logger import logging
 
-mlflow.set_tracking_uri('https://dagshub.com/kumarashutoshbtech2023/capstone-end-2-end-project.mlflow')
-dagshub.init(repo_owner='kumarashutoshbtech2023', repo_name='capstone-end-2-end-project', mlflow=True)
+import os
+import mlflow
+
+os.environ["MLFLOW_TRACKING_USERNAME"] = "kumarashutoshbtech2023"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("DAGSHUB_TOKEN")
+os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/kumarashutoshbtech2023/capstone-end-2-end-project.mlflow"
+
+mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
 def load_data(data_path:str)->pd.DataFrame:
     df=pd.read_csv(data_path)
     logging.debug('data retrieved from %s', data_path)
