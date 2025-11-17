@@ -23,7 +23,7 @@ def preprocess_data(df:pd.DataFrame)->pd.DataFrame:
 def main():
     params=load_params('params.yaml')
     test_size=params['data_preprocessing']['test_size']
-    df=pd.read_csv(r'capstone_project\data\raw\data.csv')
+    df=pd.read_csv('capstone_project/data/raw/data.csv')
     new_df=preprocess_data(df=df)
     train_df,test_df=train_test_split(new_df,stratify=new_df['Class'],test_size=test_size,random_state=42)
     logging.info(f'train data shape {train_df.shape} , test data shape {test_df.shape}')
