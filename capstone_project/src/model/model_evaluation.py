@@ -4,14 +4,15 @@ import pickle
 import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 import logging
-import mlflow
 import os
-from capstone_project.src.logger import logging
+import mlflow
 
+# Remove inherited GitHub Actions environment overrides
+for key in ["MLFLOW_TRACKING_URI", "MLFLOW_TRACKING_USERNAME", "MLFLOW_TRACKING_PASSWORD"]:
+    if key in os.environ:
+        print(f"🔧 Removing inherited env var: {key}")
+        os.environ.pop(key)
 
-# ======================================
-# SAFE MLflow + DAGSHUB CONFIGURATION
-# ======================================
 DAGSHUB_USER = "kumarashutoshbtech2023"
 DAGSHUB_REPO = "capstone-end-2-end-project"
 
@@ -19,22 +20,15 @@ token = os.getenv("DAGSHUB_TOKEN")
 
 if token:
     print("🔐 DAGSHUB_TOKEN detected — using DagsHub MLflow")
-
     os.environ["MLFLOW_TRACKING_USERNAME"] = DAGSHUB_USER
     os.environ["MLFLOW_TRACKING_PASSWORD"] = token
-
-    mlflow.set_tracking_uri(
-        f"https://dagshub.com/{DAGSHUB_USER}/{DAGSHUB_REPO}.mlflow"
-    )
-
+    mlflow.set_tracking_uri(f"https://dagshub.com/{DAGSHUB_USER}/{DAGSHUB_REPO}.mlflow")
 else:
-    print("⚠ DAGSHUB_TOKEN not found — using LOCAL Mlflow instead")
+    print("⚠ DAGSHUB_TOKEN not found — using LOCAL MLflow instead")
+
+    # Fully reset MLflow
     mlflow.set_tracking_uri(None)
-
-    # Now force local MLflow store
     mlflow.set_tracking_uri("file:./mlruns")
-    # local mlruns/ folder will be used
-
 
 # ======================================
 # UTILITIES
