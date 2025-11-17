@@ -25,7 +25,10 @@ jobs:
 
       - name: install dependencies
         run: |
-          pip install -r capstone_project/flask_app/requirements.txt 
+          pip install -r capstone_project/flask_app/requirements.txt
+          
+      - name: Install DVC
+        run: pip install dvc[s3]
 
       - name: run pipeline
         env:
