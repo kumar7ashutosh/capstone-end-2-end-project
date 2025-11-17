@@ -34,11 +34,15 @@ jobs:
         run: |
           dvc repro
 
-
-      # - name: Run Flask app tests
-      #   if: success()
-
-      #   run: python capstone_project/tests/test_flask_app.py
+      # --------------------------------------------------
+      # FIX: CONFIGURE AWS CREDENTIALS FIRST
+      # --------------------------------------------------
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Login to ECR
         run: |
@@ -56,7 +60,6 @@ jobs:
             docker tag ${{ secrets.ECR_REPOSITORY }}:latest \
             ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest
 
-    
       - name: Check Docker Authentication
         run: docker info
 
@@ -71,8 +74,7 @@ jobs:
       
       - name: Update kubeconfig
         run: |
-          aws eks update-kubeconfig --region us-east-1 --name flask-app-cluster
-
+          aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name flask-app-cluster
 
       - name: Deploy to EKS
         run: |
