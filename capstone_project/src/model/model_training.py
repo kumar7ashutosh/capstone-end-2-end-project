@@ -44,8 +44,8 @@ def main():
     power_transformer=PowerTransformer(method='yeo-johnson')
     x_train_transformed=power_transformer.fit_transform(x_train)
     clf=train_model(x_train=x_train_transformed,y_train=y_train)
-    save_transformer(power_transformer,r'capstone_project\models\power_transformer.pkl')
-    save_transformer(clf,r'capstone_project\models\model.pkl')
+    save_transformer(power_transformer,'capstone_project/models/power_transformer.pkl')
+    save_transformer(clf,'capstone_project/models/model.pkl')
 
 if __name__=='__main__':
     main()   
