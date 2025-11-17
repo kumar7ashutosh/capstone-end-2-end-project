@@ -67,15 +67,15 @@ jobs:
         run: |
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest
 
-      - name: Set Up kubectl
-        uses: azure/setup-kubectl@v3 
-        with:
-          version: 'latest'
+      # - name: Set Up kubectl
+      #   uses: azure/setup-kubectl@v3 
+      #   with:
+      #     version: 'latest'
       
-      - name: Update kubeconfig
-        run: |
-          aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name flask-app-cluster
+      # - name: Update kubeconfig
+      #   run: |
+      #     aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name flask-app-cluster
 
-      - name: Deploy to EKS
-        run: |
-          kubectl apply -f deployment.yaml
+      # - name: Deploy to EKS
+      #   run: |
+      #     kubectl apply -f deployment.yaml
